@@ -1,18 +1,36 @@
-title: Jekyll Material You
-markdown: kramdown
-# url: ""
-# baseurl: "/jekyll-theme-material-you"
+title: "9to5 | Official Lyrics"
+author: "ASMO ABDULLAH"
+description: "Explore the deep lyrics and stories behind the music of ASMO ABDULLAH."
+url: "https://asmoabdullahofficial.github.io"
+baseurl: "/9to5"
 
-# for atom feed
-author:
-  name: Sharad Raj Singh Maurya
-  email: dev_sharad@outlook.com
+email: asmoabdullahofficial@gmail.com
+twitter_username: asmoabdullah
+github_username: asmoabdullahofficial
+instagram_username: asmoabdullah
+spotify_username: "ASMO ABDULLAH"
+youtube_channel_id: "@ASMOABDULLAH"
+
+social:
+  - name: Spotify
+    link: https://open.spotify.com/artist/06iYlXf8y83fS7iA5m2L6G
+  - name: YouTube
+    link: https://www.youtube.com/@ASMOABDULLAH
+  - name: Apple Music
+    link: https://music.apple.com/us/artist/asmo-abdullah/1714470974
+  - name: X (Twitter)
+    link: https://x.com/asmoabdullah
+  - name: Instagram
+    link: https://www.instagram.com/asmoabdullah/
+  - name: Linktree
+    link: https://linktr.ee/asmoabdullah
+
+markdown: kramdown
+theme: jekyll-theme-material-you
 
 plugins:
-  - jemoji
-  - jekyll-seo-tag
-  - jekyll-sitemap
   - jekyll-feed
+  - jekyll-seo-tag
 
 collections_dir: all_collections
 collections:
@@ -25,4 +43,5 @@ defaults:
     values:
       layout: "post"
       permalink: /posts/:title/
-exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md"]
+
+exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md", "Gemfile", "Gemfile.lock"]
