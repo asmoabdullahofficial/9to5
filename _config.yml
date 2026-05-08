@@ -48,6 +48,8 @@ exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md", "Gemfile", "Gemfile
 
 google_analytics: G-MV2WXP6DVZ
 nav:
+  - name: "Home"
+    link: "/"
   - name: "About Me"
     link: "/about/"
   - name: "Contact"
