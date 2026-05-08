@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('global-search');
-  const resultsBox = document.getElementById('search-results');
+const results = lunrIndex.search(query.split(" ").map(word => word + '*').join(" "));
 
   if (!searchInput) return;
 
