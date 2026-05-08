@@ -7,8 +7,7 @@ layout: null
       "id": "{{ post.url | slugify }}",
       "title": {{ post.title | jsonify }},
       "url": {{ post.url | absolute_url | jsonify }},
-      "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-      "categories": {{ post.categories | join: ', ' | jsonify }}
-    }{% unless forloop.last %},{% endunless %}
+      "content": {{ post.content | strip_html | strip_newlines | jsonify }}
+    }{% if forloop.last == false %},{% endif %}
   {% endfor %}
 ]
