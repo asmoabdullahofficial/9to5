@@ -22,7 +22,7 @@ permalink: /contact/
     }
 
     .bg-image {
-      background-image: url('/assets/images/contact.vid'); 
+      background-image: url('/assets/images/contact-bg.png'); 
       min-height: 100vh;
       background-position: center;
       background-repeat: no-repeat;
