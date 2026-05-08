@@ -28,3 +28,11 @@ We do not knowingly collect any Personal Identifiable Information from children 
 
 ### 7. Contact Us
 If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at: **asmoabdullahofficial@gmail.com** 
+<br>
+<hr>
+<p style="text-align: center;">
+  <a href="/">Home</a> | 
+  <a href="/about/">About Me</a> | 
+  <a href="/contact/">Contact</a> | 
+  <a href="/terms/">Terms</a>
+</p>
