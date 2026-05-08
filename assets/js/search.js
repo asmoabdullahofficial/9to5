@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('global-search');
-const results = lunrIndex.search(query.split(" ").map(word => word + '*').join(" "));
+  const resultsBox = document.getElementById('search-results');
 
-  if (!searchInput) return;
+  if (!searchInput || !resultsBox) return;
 
   fetch('/search.json')
     .then(response => response.json())
     .then(posts => {
-
+      // Lunr Index Setup
       const lunrIndex = lunr(function () {
         this.ref('id');
         this.field('title', { boost: 10 });
@@ -28,7 +28,8 @@ const results = lunrIndex.search(query.split(" ").map(word => word + '*').join("
           return;
         }
 
-        const results = lunrIndex.search(query + '*');
+
+        const results = lunrIndex.search(query.split(" ").map(word => word + '*').join(" "));
 
         if (results.length === 0) {
           resultsBox.innerHTML = `<p class="p-4 text-zinc-400">No results found for "${query}"</p>`;
@@ -38,7 +39,6 @@ const results = lunrIndex.search(query.split(" ").map(word => word + '*').join("
 
         let html = '';
         results.forEach(result => {
-
           const post = posts.find(p => p.id === result.ref);
           if (post) {
             html += `
