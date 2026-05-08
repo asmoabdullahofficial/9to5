@@ -1,60 +1,74 @@
-<header class="header {% if page.layout == 'post' %}article-page{% endif %}">
-  <div class="header-container">
-    <a href="{{ site.baseurl }}/" class="site-title">
-      {{ site.title }}
-    </a>
-    
-    <nav class="header-nav">
-      <ul class="nav-list">
-        <li><a href="{{ site.baseurl }}/" class="nav-link">Home</a></li>
-        <li><a href="{{ site.baseurl }}/about/" class="nav-link">About</a></li>
-        <li><a href="{{ site.baseurl }}/contact/" class="nav-link">Contact</a></li>
-        <li><a href="{{ site.baseurl }}/#article" class="nav-link">Lyrics</a></li>
-        <li><a href="{{ site.baseurl }}/#article" class="nav-link">Stories</a></li>
+<header class="custom-header">
+  <div class="header-content">
+    <a href="{{ site.baseurl }}/" class="logo">{{ site.title }}</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="{{ site.baseurl }}/about/">About</a></li>
+        <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
+        <li><a href="{{ site.baseurl }}/#article">Lyrics</a></li>
+        <li><a href="{{ site.baseurl }}/#article">Stories</a></li>
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <style>
-  .header-container {
+  .custom-header {
+    background-color: #1a1110; 
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 180, 171, 0.1); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .header-content {
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
+    padding: 0 25px;
   }
-  .site-title {
-    font-size: 1.5rem;
-    font-weight: bold;
+  .logo {
+    color: #ffb4ab;
     text-decoration: none;
-    color: var(--md-sys-color-primary, #bb86fc);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
-  .nav-list {
+  .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 18px;
     margin: 0;
     padding: 0;
   }
-  .nav-link {
+  .nav-links a {
+    color: #e6e1e0; 
     text-decoration: none;
-    color: var(--md-sys-color-on-surface, #fff);
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.4s ease;
+    opacity: 0.7;
   }
-  .nav-link:hover {
-    color: var(--md-sys-color-primary, #bb86fc);
+  .nav-links a:hover {
+    color: #ffb4ab;
+    opacity: 1;
   }
+  
   @media (max-width: 600px) {
-    .header-container {
+    .header-content {
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
-    .nav-list {
-      font-size: 0.8rem;
-      gap: 10px;
+    .nav-links {
+      gap: 12px;
+    }
+    .nav-links a {
+      font-size: 0.7rem;
     }
   }
 </style>
