@@ -22,4 +22,4 @@ Our site contains links to other platforms like YouTube, Spotify, and BandLab. W
 We do not knowingly collect any Personal Identifiable Information from children under the age of 13.
 
 ### 7. Contact Us
-If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at: **your-email@example.com** (তোর ইমেইলটা এখানে দিয়ে দিস)।
+If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at: **asmoabdullahofficial@gmail.com** 
