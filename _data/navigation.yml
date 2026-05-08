@@ -1,0 +1,10 @@
+- name: Home
+  link: /
+- name: About Me
+  link: /about/
+- name: Contact
+  link: /contact/
+- name: Privacy Policy
+  link: /privacy-policy/
+- name: Terms
+  link: /terms/
