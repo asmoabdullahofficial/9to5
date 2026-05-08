@@ -2,30 +2,25 @@ document.addEventListener('DOMContentLoaded', function () {
   const searchInput = document.getElementById('global-search');
   const resultsBox = document.getElementById('search-results');
 
-  if (!searchInput) {
-    console.log("Search input not found");
-    return;
-  }
-
-  console.log("Search script loaded successfully");
+  if (!searchInput) return;
 
   fetch('/search.json')
-    .then(response => {
-      if (!response.ok) throw new Error("search.json not found");
-      return response.json();
-    })
+    .then(response => response.json())
     .then(posts => {
-      console.log("Search data loaded:", posts.length + " posts");
 
       const lunrIndex = lunr(function () {
         this.ref('id');
         this.field('title', { boost: 10 });
         this.field('content');
-        posts.forEach(post => this.add(post));
+        this.field('categories');
+
+        posts.forEach(post => {
+          this.add(post);
+        });
       });
 
       searchInput.addEventListener('keyup', function () {
-        const query = this.value.trim();
+        const query = this.value.trim().toLowerCase();
         resultsBox.innerHTML = '';
 
         if (query.length < 2) {
@@ -33,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return;
         }
 
-        const results = lunrIndex.search(query);
+        const results = lunrIndex.search(query + '*');
 
         if (results.length === 0) {
           resultsBox.innerHTML = `<p class="p-4 text-zinc-400">No results found for "${query}"</p>`;
@@ -43,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let html = '';
         results.forEach(result => {
+
           const post = posts.find(p => p.id === result.ref);
           if (post) {
             html += `
@@ -58,6 +54,5 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .catch(err => {
       console.error("Search error:", err);
-      resultsBox.innerHTML = `<p class="p-4 text-red-400">Search is not working properly.</p>`;
     });
 });
