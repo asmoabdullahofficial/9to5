@@ -47,4 +47,4 @@ defaults:
 exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md", "Gemfile", "Gemfile.lock"]
 
 google_analytics: G-MV2WXP6DVZ
-google-site-verification: googlee47e8dcd9b3112bd.html
+
