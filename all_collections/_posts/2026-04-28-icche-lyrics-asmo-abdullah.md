@@ -45,9 +45,9 @@ thumbnail: "assets/images/icche-cover.png"
 
 ### Listen Now
 গানের সুরের জাদুতে হারিয়ে যেতে এখনই স্ট্রিমিং করুন:
-- [Spotify](https://open.spotify.com/track/1NjnHm)
-- [YouTube Music](https://music.youtube.com/watch?v=YOUR_VIDEO_ID)
-- [Apple Music](https://music.apple.com/om/album/icche)
+- [Spotify]([https://open.spotify.com/track/1NjnHm](https://open.spotify.com/track/1NjnHmikL1jTB9KL7SzbP0?si=54b893306e14401d))
+- [YouTube Music]([https://music.youtube.com/watch?v=YOUR_VIDEO_ID](https://music.youtube.com/watch?v=w4_0Bk19KFU&si=tOCWo57mkgrZZzWX))
+- [Apple Music]([https://music.apple.com/om/album/icche](https://music.apple.com/om/song/%E0%A6%87%E0%A6%9A-%E0%A6%9B-icche/6764483528))
 
 ---
 © 2026 All Rights Reserved by ABU SAID (ASMO ABDULLAH)
