@@ -7,8 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
   fetch('/search.json')
     .then(response => response.json())
     .then(posts => {
-      // Lunr Index Setup
-      this.pipeline.remove(lunr.stopWordFilter);
+// Lunr Index Setup
+      const lunrIndex = lunr(function () {
+
+        this.pipeline.remove(lunr.stopWordFilter);
         this.pipeline.remove(lunr.stemmer);
 
         this.ref('id');
