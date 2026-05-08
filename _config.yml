@@ -3,7 +3,7 @@ author: "ASMO ABDULLAH"
 description: "Explore the deep lyrics and stories behind the music of ASMO ABDULLAH."
 
 url: "https://asmoabdullah.xyz"
-baseurl: "/9to5"
+baseurl: ""
 
 remote_theme: sharadcodes/jekyll-theme-material-you
 
