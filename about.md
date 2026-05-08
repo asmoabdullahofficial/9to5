@@ -1,6 +1,6 @@
 ---
-layout: page
-title: About ASMO ABDULLAH
+layout: post
+title: "About Me"
 permalink: /about/
 ---
 
