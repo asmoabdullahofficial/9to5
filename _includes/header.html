@@ -1,9 +1,60 @@
-{% if page.layout == "post" %}
-<header>
-  <a class="site-title article-page" href="{{site.baseurl}}/">{{site.title}}</a>
+<header class="header {% if page.layout == 'post' %}article-page{% endif %}">
+  <div class="header-container">
+    <a href="{{ site.baseurl }}/" class="site-title">
+      {{ site.title }}
+    </a>
+    
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li><a href="{{ site.baseurl }}/" class="nav-link">Home</a></li>
+        <li><a href="{{ site.baseurl }}/about/" class="nav-link">About</a></li>
+        <li><a href="{{ site.baseurl }}/contact/" class="nav-link">Contact</a></li>
+        <li><a href="{{ site.baseurl }}/#article" class="nav-link">Lyrics</a></li>
+        <li><a href="{{ site.baseurl }}/#article" class="nav-link">Stories</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
-{% else %}
-<header>
-  <a class="site-title" href="{{site.baseurl}}/">{{site.title}}</a>
-</header>
-{% endif %}
+
+<style>
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--md-sys-color-primary, #bb86fc);
+  }
+  .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: var(--md-sys-color-on-surface, #fff);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .nav-link:hover {
+    color: var(--md-sys-color-primary, #bb86fc);
+  }
+  @media (max-width: 600px) {
+    .header-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .nav-list {
+      font-size: 0.8rem;
+      gap: 10px;
+    }
+  }
+</style>
