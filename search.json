@@ -1,13 +1,14 @@
 ---
 layout: null
 ---
+
 [
   {% for post in site.posts %}
   {
     "id": "{{ post.id }}",
     "title": "{{ post.title | escape }}",
     "url": "{{ site.baseurl }}{{ post.url }}",
-    "content": "{{ post.content | strip_html | escape | truncate: 5000 }}"
+    "content": "{{ post.content | strip_html | escape | truncate: 3000 }}"
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
