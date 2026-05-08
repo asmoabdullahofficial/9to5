@@ -1,8 +1,12 @@
 ---
-layout: default
+layout: page
 title: Privacy Policy
 permalink: /privacy-policy/
 ---
+
+<div style="margin-bottom: 20px;">
+  <a href="/" style="color: #4ade80; text-decoration: none; font-weight: bold;">← Back to Home</a>
+</div>
 # Privacy Policy
 **Last updated: May 08, 2026**
 
@@ -28,11 +32,11 @@ We do not knowingly collect any Personal Identifiable Information from children 
 
 ### 7. Contact Us
 If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at: **asmoabdullahofficial@gmail.com** 
-<br>
-<hr>
-<p style="text-align: center;">
-  <a href="/">Home</a> | 
-  <a href="/about/">About Me</a> | 
-  <a href="/contact/">Contact</a> | 
-  <a href="/terms/">Terms</a>
-</p>
+
+<hr style="border: 0.5px solid #333; margin: 40px 0;">
+
+<div style="text-align: center; color: #888;">
+  <a href="/about" style="margin: 0 10px;">About Me</a> | 
+  <a href="/contact" style="margin: 0 10px;">Contact</a> | 
+  <a href="/terms" style="margin: 0 10px;">Terms</a>
+</div>
