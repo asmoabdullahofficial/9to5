@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   console.log("Search script loaded successfully");
 
-  fetch('/9to5/search.json')
+  fetch('/search.json')
     .then(response => {
       if (!response.ok) throw new Error("search.json not found");
       return response.json();
