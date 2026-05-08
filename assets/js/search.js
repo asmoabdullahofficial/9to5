@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(response => response.json())
     .then(posts => {
       // Lunr Index Setup
-      const lunrIndex = lunr(function () {
+      this.pipeline.remove(lunr.stopWordFilter);
+        this.pipeline.remove(lunr.stemmer);
+
         this.ref('id');
         this.field('title', { boost: 10 });
         this.field('content');
