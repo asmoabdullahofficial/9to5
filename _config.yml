@@ -31,11 +31,6 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate
-
-# Pagination Configuration
-paginate: 6
-paginate_path: "/page:num/"
 
 collections_dir: all_collections
 collections:
@@ -44,9 +39,12 @@ collections:
 
 defaults:
   - scope:
-      path: "all_collections/_posts"
+      path: ""
     values:
       layout: "post"
+  - scope:
+      path: "all_collections/_posts"
+    values:
       permalink: /posts/:title/
 
 exclude: ["LICENSE", "README.md", "Gemfile", "Gemfile.lock"]
