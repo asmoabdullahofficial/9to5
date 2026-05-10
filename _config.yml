@@ -28,18 +28,14 @@ social:
 
 markdown: kramdown
 
-# Fix: Use jekyll-paginate-v2 for Collections
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate-v2
+  - jekyll-paginate
 
-pagination:
-  enabled: true
-  collection: 'posts'
-  per_page: 5
-  permalink: '/page/:num/'
-  title_suffix: ' - Page :num'
+# Pagination Configuration
+paginate: 6
+paginate_path: "/page:num/"
 
 collections_dir: all_collections
 collections:
@@ -48,12 +44,9 @@ collections:
 
 defaults:
   - scope:
-      path: ""
-    values:
-      layout: "post"
-  - scope:
       path: "all_collections/_posts"
     values:
+      layout: "post"
       permalink: /posts/:title/
 
 exclude: ["LICENSE", "README.md", "Gemfile", "Gemfile.lock"]
