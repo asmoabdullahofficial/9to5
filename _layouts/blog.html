@@ -8,8 +8,8 @@
 
       <section id="articles">
         {% for post in paginator.posts %}
-        {% if post.thumbnail %}
         <article class="article">
+          {% if post.thumbnail %}
           <div class="article-top">
             <div class="article-thumbnail" style="background-image: url('{{ post.thumbnail }}');">
               <div class="article-title">
@@ -17,56 +17,37 @@
               </div>
             </div>
           </div>
-          <div class="article-bottom">
-            <small class="article-date">{{post.date | date_to_string}}</small>
-            <div class="article-categories">
-              <div class="article-categories">
-                {% for c in post.categories %}
-                <h1>
-                  <a href="#!" data-base-url="{{site.baseurl}}" class="article-category">{{c}}</a>
-                </h1>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </article>
-        {% else %}
-        <article class="article">
+          {% else %}
           <h2 class="article-top">
             <div class="article-title">
               <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
             </div>
           </h2>
+          {% endif %}
           <div class="article-bottom">
             <small class="article-date">{{post.date | date_to_string}}</small>
             <div class="article-categories">
               {% for c in post.categories %}
-              <a href="#!" data-base-url="{{site.baseurl}}" class="article-category">{{c}}</a>
+              <a href="#!" class="article-category">{{c}}</a>
               {% endfor %}
             </div>
           </div>
         </article>
-        {% endif %}
         {% endfor %}
       </section>
 
       {% if paginator.total_pages > 1 %}
-      <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin: 40px 0; padding-bottom: 20px;">
+      <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin: 40px 0;">
         {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" style="background: rgba(255,255,255,0.05); color: #4ade80; padding: 12px 24px; border-radius: 30px; border: 1px solid #333; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">&laquo; Previous</a>
-        {% else %}
-          <span style="color: #444; padding: 12px 24px; border-radius: 30px; border: 1px solid #222; font-size: 14px; cursor: not-allowed;">&laquo; Previous</span>
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" style="background: #161616; color: #4ade80; padding: 10px 20px; border-radius: 20px; border: 1px solid #333; text-decoration: none;">« Prev</a>
         {% endif %}
-
-        <span style="color: #888; font-family: monospace; font-size: 14px;">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-
+        <span style="color: #888;">{{ paginator.page }} / {{ paginator.total_pages }}</span>
         {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" style="background: rgba(255,255,255,0.05); color: #4ade80; padding: 12px 24px; border-radius: 30px; border: 1px solid #333; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">Next &raquo;</a>
-        {% else %}
-          <span style="color: #444; padding: 12px 24px; border-radius: 30px; border: 1px solid #222; font-size: 14px; cursor: not-allowed;">Next &raquo;</span>
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" style="background: #161616; color: #4ade80; padding: 10px 20px; border-radius: 20px; border: 1px solid #333; text-decoration: none;">Next »</a>
         {% endif %}
       </div>
       {% endif %}
+
       {% include footer.html %}
     </main>
     {% include category-modal.html%}
