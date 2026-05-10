@@ -131,7 +131,7 @@ permalink: /contact/
         <h3>Follow the Movement</h3>
         <div class="social-links">
           <a href="https://www.youtube.com/@ASMOABDULLAH" target="_blank">YouTube</a>
-          <a href="https://spotify.com" target="_blank">Spotify</a>
+          <a href="[https://spotify.com](https://open.spotify.com/artist/0Zw4jjy9vBDgwKBVbXfhYW)" target="_blank">Spotify</a>
           <a href="https://www.instagram.com/asmoabdullah" target="_blank">Instagram</a>
           <a href="https://x.com/asmoabdullah" target="_blank">X (Twitter)</a>
         </div>
