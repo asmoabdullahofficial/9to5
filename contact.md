@@ -129,12 +129,12 @@ permalink: /contact/
         <p>Official Inquiries: <a href="mailto:asmoabdullahofficial@gmail.com" class="email-link">asmoabdullahofficial@gmail.com</a></p>
 
         <h3>Follow the Movement</h3>
-        <div class="social-links">
-          <a href="https://www.youtube.com/@ASMOABDULLAH" target="_blank">YouTube</a>
-          <a href="[https://spotify.com](https://open.spotify.com/artist/0Zw4jjy9vBDgwKBVbXfhYW)" target="_blank">Spotify</a>
-          <a href="https://www.instagram.com/asmoabdullah" target="_blank">Instagram</a>
-          <a href="https://x.com/asmoabdullah" target="_blank">X (Twitter)</a>
-        </div>
+<div class="social-links">
+  <a href="https://www.youtube.com/@ASMOABDULLAH" target="_blank">YouTube</a>
+  <a href="https://open.spotify.com/artist/0Zw4jjy9vBDgwKBVbXfhYW" target="_blank">Spotify</a>
+  <a href="https://www.instagram.com/asmoabdullah" target="_blank">Instagram</a>
+  <a href="https://x.com/asmoabdullah" target="_blank">X (Twitter)</a>
+</div>
 
         <p style="margin-top: 40px; font-style: italic; color: #888;">
           I usually respond within 24-48 hours. Stay lyrical!
