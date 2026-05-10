@@ -7,7 +7,7 @@
       {% include bio.html %}
 
       <section id="articles">
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
         {% if post.thumbnail %}
         <article class="article">
           <div class="article-top">
@@ -50,6 +50,23 @@
         {% endfor %}
       </section>
 
+      {% if paginator.total_pages > 1 %}
+      <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin: 40px 0; padding-bottom: 20px;">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" style="background: rgba(255,255,255,0.05); color: #4ade80; padding: 12px 24px; border-radius: 30px; border: 1px solid #333; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">&laquo; Previous</a>
+        {% else %}
+          <span style="color: #444; padding: 12px 24px; border-radius: 30px; border: 1px solid #222; font-size: 14px; cursor: not-allowed;">&laquo; Previous</span>
+        {% endif %}
+
+        <span style="color: #888; font-family: monospace; font-size: 14px;">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" style="background: rgba(255,255,255,0.05); color: #4ade80; padding: 12px 24px; border-radius: 30px; border: 1px solid #333; text-decoration: none; font-weight: bold; font-size: 14px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">Next &raquo;</a>
+        {% else %}
+          <span style="color: #444; padding: 12px 24px; border-radius: 30px; border: 1px solid #222; font-size: 14px; cursor: not-allowed;">Next &raquo;</span>
+        {% endif %}
+      </div>
+      {% endif %}
       {% include footer.html %}
     </main>
     {% include category-modal.html%}
