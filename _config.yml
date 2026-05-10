@@ -28,9 +28,15 @@ social:
 
 markdown: kramdown
 
+# Pagination fix start
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate
+
+paginate: 5
+paginate_path: "/page:num/"
+# Pagination fix end
 
 collections_dir: all_collections
 collections:
@@ -47,4 +53,3 @@ defaults:
 exclude: ["LICENSE", "README.md", "Gemfile", "Gemfile.lock"]
 
 google_analytics: G-MV2WXP6DVZ
-
