@@ -7,9 +7,10 @@
       {% include bio.html %}
 
       <section id="articles">
-        {% for post in paginator.posts %}
-        {% if post.thumbnail %}
+        {% assign posts = site.posts | reverse %}
+        {% for post in posts %}
         <article class="article">
+          {% if post.thumbnail %}
           <div class="article-top">
             <div class="article-thumbnail" style="background-image: url('{{ post.thumbnail }}');">
               <div class="article-title">
@@ -17,52 +18,28 @@
               </div>
             </div>
           </div>
-          <div class="article-bottom">
-            <small class="article-date">{{post.date | date_to_string}}</small>
-            <div class="article-categories">
-              <div class="article-categories">
-                {% for c in post.categories %}
-                <h1>
-                  <a href="#!" data-base-url="{{site.baseurl}}" class="article-category">{{c}}</a>
-                </h1>
-                {% endfor %}
-              </div>
-            </div>
-          </div>
-        </article>
-        {% else %}
-        <article class="article">
+          {% else %}
           <h2 class="article-top">
             <div class="article-title">
               <a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a>
             </div>
           </h2>
+          {% endif %}
           <div class="article-bottom">
             <small class="article-date">{{post.date | date_to_string}}</small>
             <div class="article-categories">
               {% for c in post.categories %}
-              <a href="#!" data-base-url="{{site.baseurl}}" class="article-category">{{c}}</a>
+              <a href="#!" class="article-category">{{c}}</a>
               {% endfor %}
             </div>
           </div>
         </article>
-        {% endif %}
         {% endfor %}
       </section>
 
-      {% if paginator.total_pages > 1 %}
-      <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin: 50px 0; padding-bottom: 30px;">
-        {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" style="background: #111; color: #4ade80; padding: 12px 25px; border-radius: 50px; border: 1px solid #333; text-decoration: none; font-size: 14px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.5); transition: 0.3s;">PREV</a>
-        {% endif %}
-
-        <span style="color: #666; font-family: sans-serif; font-size: 12px; letter-spacing: 2px;">{{ paginator.page }} / {{ paginator.total_pages }}</span>
-
-        {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" style="background: #111; color: #4ade80; padding: 12px 25px; border-radius: 50px; border: 1px solid #333; text-decoration: none; font-size: 14px; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.5); transition: 0.3s;">NEXT</a>
-        {% endif %}
+      <div style="text-align: center; margin: 40px 0; color: #4ade80; font-family: sans-serif; font-size: 13px; letter-spacing: 2px;">
+        END OF THE MOVEMENT
       </div>
-      {% endif %}
 
       {% include footer.html %}
     </main>
