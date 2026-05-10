@@ -1,52 +1,97 @@
 title: "9to5 | ASMO ABDULLAH"
+
 author: "ASMO ABDULLAH"
+
 description: "Explore the deep lyrics and stories behind the music of ASMO ABDULLAH."
 
+
+
 url: "https://asmoabdullah.xyz"
+
 baseurl: ""
+
+
 
 remote_theme: sharadcodes/jekyll-theme-material-you
 
+
+
 email: asmoabdullahofficial@gmail.com
+
 twitter_username: asmoabdullah
+
 github_username: asmoabdullahofficial
+
 instagram_username: asmoabdullah
 
+
+
 social:
+
   - name: Spotify
+
     link: https://open.spotify.com/artist/06iYlXf8y83fS7iA5m2L6G
+
   - name: YouTube
+
     link: https://www.youtube.com/@ASMOABDULLAH
+
   - name: Apple Music
+
     link: https://music.apple.com/us/artist/asmo-abdullah/1714470974
+
   - name: X (Twitter)
+
     link: https://x.com/asmoabdullah
+
   - name: Instagram
+
     link: https://www.instagram.com/asmoabdullah/
+
   - name: Linktree
+
     link: https://linktr.ee/asmoabdullah
+
+
 
 markdown: kramdown
 
+
+
 plugins:
+
   - jekyll-feed
+
   - jekyll-seo-tag
 
+
+
 collections_dir: all_collections
+
 collections:
+
   posts:
+
     output: true
 
+
+
 defaults:
+
   - scope:
-      path: ""
+
+      path: "_posts"
+
     values:
+
       layout: "post"
-  - scope:
-      path: "all_collections/_posts"
-    values:
+
       permalink: /posts/:title/
 
+
+
 exclude: ["LICENSE", "README.md", "Gemfile", "Gemfile.lock"]
+
+
 
 google_analytics: G-MV2WXP6DVZ
