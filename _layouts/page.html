@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <main class="blogfeed">
+      {% include header.html %}
+
+      <section id="article">
+        <div style="max-width: 800px; margin: 40px auto 0; padding: 0 20px;">
+          
+          <!-- Back to home link (optional but pro look) -->
+          <a href="{{site.baseurl}}/" style="color: #4ade80; text-decoration: none; font-size: 13px; font-weight: bold; letter-spacing: 1px; display: inline-block; margin-bottom: 20px;">
+            ← BACK TO HOME
+          </a>
+
+          {{ content }}
+
+        </div>
+      </section>
+
+      {% include footer.html %}
+    </main>
+
+    {% include category-modal.html %}
+    {% include chatbot.html %}
+  </body>
+</html>
