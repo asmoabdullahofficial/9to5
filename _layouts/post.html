@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
+  <style>
+    /* Merch & Gear Custom Styles */
+    .asmo-merch-section { margin-top: 40px; text-align: left; }
+    .asmo-title { border-bottom: 2px solid #4ade80; display: inline-block; margin-bottom: 20px; font-size: 22px; text-transform: uppercase; color: #fff; font-weight: bold; }
+    .asmo-banner { background: linear-gradient(145deg, #111, #222); padding: 35px; border-radius: 20px; text-align: center; border: 1px solid #333; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .asmo-btn-store { background: #4ade80; color: #000; padding: 12px 28px; border-radius: 50px; font-weight: bold; text-decoration: none; transition: 0.3s; display: inline-block; margin-top: 15px; }
+    .asmo-btn-store:hover { background: #fff; transform: scale(1.05); }
+    .asmo-gear-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .asmo-gear-card { background: #161616; padding: 25px; border-radius: 15px; border: 1px solid #27272a; text-align: center; transition: 0.3s; }
+    .asmo-gear-card:hover { border-color: #4ade80; transform: translateY(-5px); background: #1a1a1a; }
+    .asmo-btn-amazon { color: #4ade80; text-decoration: none; font-size: 12px; font-weight: bold; border: 1px solid #4ade80; padding: 8px 18px; border-radius: 5px; display: inline-block; margin-top: 10px; transition: 0.3s; }
+    .asmo-btn-amazon:hover { background: #4ade80; color: #000; }
+  </style>
   <body>
     <main class="blogfeed">
       {% include header.html %}
@@ -28,6 +41,7 @@
         </div>
 
         <div class="article-content">
+          {% unless page.url contains '/merch/' %}
           <div style="margin: 30px 0; padding: 25px; background: linear-gradient(145deg, #161616, #0d0d0d); border: 1px solid #333; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); text-align: center;">
             <h3 style="color: #4ade80; font-family: sans-serif; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; font-size: 14px;">Listen to the Movement</h3>
             <div style="display: flex; justify-content: center; gap: 25px; flex-wrap: wrap;">
@@ -37,15 +51,50 @@
               <a href="https://www.instagram.com/asmoabdullah" target="_blank" style="text-decoration: none;"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="45" height="45" alt="Instagram"></a>
             </div>
           </div>
+          {% endunless %}
 
           {{content}}
+
+          {% if page.url contains '/merch/' %}
+          <div class="asmo-merch-section">
+            <h2 class="asmo-title">Official Merch</h2>
+            <div class="asmo-banner">
+              <h3 style="color: #fff; font-size: 26px; margin-bottom: 10px;">ASMO ABDULLAH Official Store</h3>
+              <p style="color: #888; font-size: 14px;">Exclusive "I'm Gone" & "ICCHE" Apparel Collection</p>
+              <a href="https://asmoabdullah-shop.fourthwall.com/" target="_blank" class="asmo-btn-store">VISIT SHOP</a>
+            </div>
+
+            <h2 class="asmo-title">Studio Gear</h2>
+            <p style="color: #666; font-size: 12px; margin-bottom: 20px;">Professional gear used for my music production.</p>
+            <div class="asmo-gear-grid">
+              <div class="asmo-gear-card">
+                <h4 style="color: #fff; font-size: 15px; margin-bottom: 15px;">Shure SM7B Microphone</h4>
+                <a href="https://amzn.to/3PctcGM" target="_blank" class="asmo-btn-amazon">BUY ON AMAZON</a>
+              </div>
+              <div class="asmo-gear-card">
+                <h4 style="color: #fff; font-size: 15px; margin-bottom: 15px;">Audio-Technica ATH-M50X</h4>
+                <a href="https://amzn.to/48UVMTL" target="_blank" class="asmo-btn-amazon">BUY ON AMAZON</a>
+              </div>
+              <div class="asmo-gear-card">
+                <h4 style="color: #fff; font-size: 15px; margin-bottom: 15px;">Marsail Ergonomic Chair</h4>
+                <a href="https://amzn.to/3OYf04a" target="_blank" class="asmo-btn-amazon">BUY ON AMAZON</a>
+              </div>
+              <div class="asmo-gear-card">
+                <h4 style="color: #fff; font-size: 15px; margin-bottom: 15px;">Focusrite Scarlett Solo</h4>
+                <a href="https://amzn.to/4njHzFX" target="_blank" class="asmo-btn-amazon">BUY ON AMAZON</a>
+              </div>
+              <div class="asmo-gear-card">
+                <h4 style="color: #fff; font-size: 15px; margin-bottom: 15px;">Edifier R1280Ts Speakers</h4>
+                <a href="https://amzn.to/4njHGBn" target="_blank" class="asmo-btn-amazon">BUY ON AMAZON</a>
+              </div>
+            </div>
+          </div>
+          {% endif %}
 
           <div style="margin-top: 50px; padding: 30px; background: #0a0a0a; border: 1px solid #333; border-top: 3px solid #4ade80; border-radius: 15px; text-align: center;">
             <h3 style="color: #fff; font-family: sans-serif; margin-bottom: 8px;">⚡ Support the Artist</h3>
             <p style="color: #666; font-size: 12px; margin-bottom: 25px; letter-spacing: 0.5px;">PayPal is restricted. Your crypto support keeps the music alive.</p>
-            
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-              
               <div onclick="copyAddress('0x02644a296afc570090514E1d82eB8c18507bDaa2', 'evm-tip')" style="background: #111; padding: 15px; border-radius: 12px; border: 1px solid #222; text-align: left; display: flex; align-items: center; gap: 15px; cursor: pointer; transition: 0.3s;" onmouseover="this.style.borderColor='#4ade80'" onmouseout="this.style.borderColor='#222'">
                 <img src="https://cdn-icons-png.flaticon.com/512/7016/7016531.png" width="35" height="35" alt="EVM">
                 <div style="flex-grow: 1; overflow: hidden;">
@@ -56,7 +105,6 @@
                   <code style="color: #ccc; font-size: 10px; word-break: break-all;">0x02644a296afc570090514E1d82eB8c18507bDaa2</code>
                 </div>
               </div>
-
               <div onclick="copyAddress('bc1p6r0p06zwg3nuu6mqnajflaadmhyqxxdy47cvw27kgt2s5cu9kevq7wjx89', 'btc-tip')" style="background: #111; padding: 15px; border-radius: 12px; border: 1px solid #222; text-align: left; display: flex; align-items: center; gap: 15px; cursor: pointer; transition: 0.3s;" onmouseover="this.style.borderColor='#f7931a'" onmouseout="this.style.borderColor='#222'">
                 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png" width="35" height="35" alt="BTC">
                 <div style="flex-grow: 1; overflow: hidden;">
@@ -67,7 +115,6 @@
                   <code style="color: #ccc; font-size: 10px; word-break: break-all;">bc1p6r0p06zwg3nuu6mqnajflaadmhyqxxdy47cvw27kgt2s5cu9kevq7wjx89</code>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -75,7 +122,6 @@
       {% include footer.html %}
     </main>
     {% include category-modal.html%}
-
     <script>
       function copyAddress(text, tipId) {
         navigator.clipboard.writeText(text).then(function() {
@@ -89,6 +135,5 @@
         });
       }
     </script>
-
   </body>
 </html>
