@@ -8,16 +8,50 @@
       <section id="article">
         <div style="max-width: 800px; margin: 20px auto 0; padding: 0 20px;">
           
-          <!-- Back to Home (post.html er moto) -->
           <a href="{{site.baseurl}}/" style="color: #4ade80; text-decoration: none; font-size: 12px; font-weight: bold; letter-spacing: 1px;">← BACK TO HOME</a>
 
-          <!-- Lyrics-style beautiful content box -->
-          <div class="article-content" style="margin: 30px 0; padding: 35px; background: linear-gradient(145deg, #161616, #0d0d0d); border: 1px solid #333; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+          <div class="article-content" style="
+            margin: 30px 0; 
+            padding: 40px 35px; 
+            background: linear-gradient(145deg, #161616, #0d0d0d); 
+            border: 1px solid #333; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          ">
             
+            <!-- Typography fix for headings & paragraphs -->
+            <style>
+              .article-content h1 { 
+                color: #ffffff; 
+                font-size: 2.4em; 
+                margin-bottom: 25px; 
+                border-bottom: 3px solid #4ade80; 
+                padding-bottom: 12px;
+              }
+              .article-content h2 { 
+                color: #4ade80; 
+                font-size: 1.65em; 
+                margin: 45px 0 18px 0; 
+              }
+              .article-content h3 { 
+                color: #4ade80; 
+                font-size: 1.35em; 
+                margin: 35px 0 15px 0; 
+              }
+              .article-content p { 
+                font-size: 1.1rem; 
+                line-height: 1.85; 
+                color: #eaeaea; 
+                margin-bottom: 22px; 
+              }
+              .article-content strong { color: #fff; }
+              .article-content ul, .article-content ol { margin: 20px 0; padding-left: 25px; }
+            </style>
+
             {{ content }}
 
           </div>
-
         </div>
       </section>
 
