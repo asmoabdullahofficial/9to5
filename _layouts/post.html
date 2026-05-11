@@ -5,7 +5,33 @@
     /* Merch & Gear Custom Styles */
     .asmo-merch-section { margin-top: 40px; text-align: left; }
     .asmo-title { border-bottom: 2px solid #4ade80; display: inline-block; margin-bottom: 20px; font-size: 22px; text-transform: uppercase; color: #fff; font-weight: bold; }
-    .asmo-banner { background: linear-gradient(145deg, #111, #222); padding: 35px; border-radius: 20px; text-align: center; border: 1px solid #333; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    
+    /* ১. নিচের স্টোর ব্যানারের জন্য ব্যাকগ্রাউন্ড ছবি */
+    .asmo-banner { 
+      position: relative;
+      background-image: url('{{ site.baseurl }}/assets/images/store_bg.jpg'); 
+      background-size: cover;
+      background-position: center;
+      padding: 35px; 
+      border-radius: 20px; 
+      text-align: center; 
+      border: 1px solid #333; 
+      margin-bottom: 40px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+      overflow: hidden;
+    }
+    
+    /* স্টোর ব্যানারের ওপর ডার্ক শেড */
+    .asmo-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6); 
+      z-index: 1;
+    }
+
+    .asmo-banner h3, .asmo-banner p, .asmo-btn-store { position: relative; z-index: 2; }
+
     .asmo-btn-store { background: #4ade80; color: #000; padding: 12px 28px; border-radius: 50px; font-weight: bold; text-decoration: none; transition: 0.3s; display: inline-block; margin-top: 15px; }
     .asmo-btn-store:hover { background: #fff; transform: scale(1.05); }
     .asmo-gear-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
@@ -13,7 +39,23 @@
     .asmo-gear-card:hover { border-color: #4ade80; transform: translateY(-5px); background: #1a1a1a; }
     .asmo-btn-amazon { color: #4ade80; text-decoration: none; font-size: 12px; font-weight: bold; border: 1px solid #4ade80; padding: 8px 18px; border-radius: 5px; display: inline-block; margin-top: 10px; transition: 0.3s; }
     .asmo-btn-amazon:hover { background: #4ade80; color: #000; }
+
+    /* ২. মেইন থাম্বনেইল ব্যানারের ওপর ডার্ক শেড (যাতে লেখা ফুটে ওঠে) */
+    .article-thumbnail {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+    .article-thumbnail::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .article-title, .article-bottom { position: relative; z-index: 2; }
   </style>
+
   <body>
     <main class="blogfeed">
       {% include header.html %}
@@ -22,13 +64,15 @@
            <a href="{{site.baseurl}}/" style="color: #4ade80; text-decoration: none; font-size: 12px; font-weight: bold; letter-spacing: 1px;">← BACK TO HOME</a>
         </div>
 
-        {% if page.thumbnail %}
-        {% assign page_thumbnail = page.thumbnail %}
+        {% if page.url contains '/merch/' %}
+           {% assign page_thumbnail = '/assets/images/header_bg.jpg' %}
+        {% elsif page.thumbnail %}
+           {% assign page_thumbnail = page.thumbnail %}
         {% else %}
-        {% assign page_thumbnail = '/assets/images/pattern.png' %}
+           {% assign page_thumbnail = '/assets/images/pattern.png' %}
         {% endif %}
         
-        <div class="article-thumbnail" style="background-image: url('{{ site.baseurl }}/{{ page_thumbnail }}');">
+        <div class="article-thumbnail" style="background-image: url('{{ site.baseurl }}{{ page_thumbnail }}');">
           <h1 class="article-title">{{ page.title }}</h1>
           <div class="article-bottom">
             <small class="article-date">{{page.date | date_to_string}}</small>
@@ -58,9 +102,10 @@
           {% if page.url contains '/merch/' %}
           <div class="asmo-merch-section">
             <h2 class="asmo-title">Official Merch</h2>
+            
             <div class="asmo-banner">
               <h3 style="color: #fff; font-size: 26px; margin-bottom: 10px;">ASMO ABDULLAH Official Store</h3>
-              <p style="color: #888; font-size: 14px;">Exclusive "I'm Gone" & "ICCHE" Apparel Collection</p>
+              <p style="color: #ccc; font-size: 14px;">Exclusive "I'm Gone" & "ICCHE" Apparel Collection</p>
               <a href="https://asmoabdullah-shop.fourthwall.com/" target="_blank" class="asmo-btn-store">VISIT SHOP</a>
             </div>
 
