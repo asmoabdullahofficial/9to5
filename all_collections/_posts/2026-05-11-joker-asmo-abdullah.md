@@ -1,16 +1,16 @@
 ---
 layout: post
 title: "JOKER - ASMO ABDULLAH | Official Hindi Lyrics"
-date: 2026-12-15
+date: 2026-05-11
 categories: ["Music", "Hindi Rap", "Emotional"]
 thumbnail: "assets/images/joker-cover.png"
 ---
 
-# জোকার - JOKER: হাসির আড়ালে লুকিয়ে থাকা এক বিষণ্ণ আত্মা
+# জোকার - JOKER: হাসির আড়ালে লুকিয়ে থাকা এক বিষণ্ণ আত্মা
 **Artist:** ASMO ABDULLAH  
-**Release Date:** December 15, 2025
+**Release Date:** December 7, 2025
 
-"JOKER" গানটি জীবনের এক অদ্ভুত ট্র্যাজেডির প্রতিফলন। যেখানে এএসএমও আবদুল্লাহ (ASMO ABDULLAH) একজন জোকারের ভূমিকায় অবতীর্ণ হয়েছেন, যে নিজের গভীর ক্ষতগুলোকে জোরপূর্বক হাসির আড়ালে ঢেকে রাখে। গানটি আমাদের সমাজের উদাসীনতা, অপূর্ণ স্বপ্ন এবং ভেতরের অস্থিরতাকে প্রশ্নবিদ্ধ করে। জীবনটা যখন নিজের কাছেই একটি তামাশা মনে হয়, ঠিক সেই মুহূর্তের অনুভূতিগুলোই এই ট্র্যাকে উঠে এসেছে।
+"JOKER" গানটি জীবনের এক অদ্ভুত ট্র্যাজেডির প্রতিফলন। যেখানে এএসএমও আবদুল্লাহ (ASMO ABDULLAH) একজন জোকারের ভূমিকায় অবতীর্ণ হয়েছেন, যে নিজের গভীর ক্ষতগুলোকে জোরপূর্বক হাসির আড়ালে ঢেকে রাখে। গানটি আমাদের সমাজের উদাসীনতা, অপূর্ণ স্বপ্ন এবং ভেতরের অস্থিরতাকে প্রশ্নবিদ্ধ করে। জীবনটা যখন নিজের কাছেই একটি তামাশা মনে হয়, ঠিক সেই মুহূর্তের অনুভূতিগুলোই এই ট্র্যাকে উঠে এসেছে।
 
 ---
 
@@ -47,14 +47,14 @@ Kya sabse piche reh gaya, yeh zindegi tho sar gaya
 Sab khushiya bhi mar gaya, main bhi shayad ab mar gaya  
 
 **[Outro]** Bate nehi karta ziyada tabi Gaane gaata hu  
-Gaano me bhi logon ko Mai hasata hi rehta hu  
+Gaানো me bhi logon ko Mai hasata hi rehta hu  
 Kiske liye karta hu yeh khud mujhe nehi pata  
 Hamesha khuda ke aage jhuke hue rehta hu  
 
 ---
 
 ### Listen Now
-অন্তরের ক্ষত নিরাময় করতে গানটি এখনই স্ট্রিমিং করুন:
+অন্তরের ক্ষত নিরাময় করতে গানটি এখনই স্ট্রিমিং করুন:
 * [Spotify](https://open.spotify.com/artist/0Zw4jjy9vBDgwKBVbXfhYW)
 * [YouTube](https://music.youtube.com/channel/UCDX_15wIaAZoKbe6KBVkTKA)
 * [Apple Music](https://music.apple.com/om/artist/asmo-abdullah/1860330114)
