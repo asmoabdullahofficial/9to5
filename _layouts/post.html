@@ -45,21 +45,29 @@
             <p style="color: #666; font-size: 12px; margin-bottom: 25px; letter-spacing: 0.5px;">PayPal is restricted. Your crypto support keeps the music alive.</p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-              <div style="background: #111; padding: 15px; border-radius: 12px; border: 1px solid #222; text-align: left; display: flex; align-items: center; gap: 15px;">
+              
+              <div onclick="copyAddress('0x02644a296afc570090514E1d82eB8c18507bDaa2', 'evm-tip')" style="background: #111; padding: 15px; border-radius: 12px; border: 1px solid #222; text-align: left; display: flex; align-items: center; gap: 15px; cursor: pointer; transition: 0.3s;" onmouseover="this.style.borderColor='#4ade80'" onmouseout="this.style.borderColor='#222'">
                 <img src="https://cdn-icons-png.flaticon.com/512/7016/7016531.png" width="35" height="35" alt="EVM">
                 <div style="flex-grow: 1; overflow: hidden;">
-                  <span style="color: #4ade80; font-weight: bold; font-size: 11px; display: block;">EVM (USDT / POLYGON / ETH)</span>
+                  <span style="color: #4ade80; font-weight: bold; font-size: 11px; display: flex; justify-content: space-between; align-items: center;">
+                    EVM (USDT / POLYGON / ETH)
+                    <small id="evm-tip" style="color: #fff; background: #4ade80; padding: 2px 6px; border-radius: 4px; font-size: 9px; display: none;">COPIED!</small>
+                  </span>
                   <code style="color: #ccc; font-size: 10px; word-break: break-all;">0x02644a296afc570090514E1d82eB8c18507bDaa2</code>
                 </div>
               </div>
 
-              <div style="background: #111; padding: 15px; border-radius: 12px; border: 1px solid #222; text-align: left; display: flex; align-items: center; gap: 15px;">
+              <div onclick="copyAddress('bc1p6r0p06zwg3nuu6mqnajflaadmhyqxxdy47cvw27kgt2s5cu9kevq7wjx89', 'btc-tip')" style="background: #111; padding: 15px; border-radius: 12px; border: 1px solid #222; text-align: left; display: flex; align-items: center; gap: 15px; cursor: pointer; transition: 0.3s;" onmouseover="this.style.borderColor='#f7931a'" onmouseout="this.style.borderColor='#222'">
                 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png" width="35" height="35" alt="BTC">
                 <div style="flex-grow: 1; overflow: hidden;">
-                  <span style="color: #f7931a; font-weight: bold; font-size: 11px; display: block;">BITCOIN (BTC)</span>
+                  <span style="color: #f7931a; font-weight: bold; font-size: 11px; display: flex; justify-content: space-between; align-items: center;">
+                    BITCOIN (BTC)
+                    <small id="btc-tip" style="color: #fff; background: #f7931a; padding: 2px 6px; border-radius: 4px; font-size: 9px; display: none;">COPIED!</small>
+                  </span>
                   <code style="color: #ccc; font-size: 10px; word-break: break-all;">bc1p6r0p06zwg3nuu6mqnajflaadmhyqxxdy47cvw27kgt2s5cu9kevq7wjx89</code>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -67,5 +75,20 @@
       {% include footer.html %}
     </main>
     {% include category-modal.html%}
+
+    <script>
+      function copyAddress(text, tipId) {
+        navigator.clipboard.writeText(text).then(function() {
+          var tip = document.getElementById(tipId);
+          tip.style.display = 'block';
+          setTimeout(function() {
+            tip.style.display = 'none';
+          }, 2000);
+        }, function(err) {
+          console.error('Could not copy text: ', err);
+        });
+      }
+    </script>
+
   </body>
 </html>
