@@ -1,16 +1,16 @@
 ---
 layout: post
 title: "#ROCKSTAR - ASMO ABDULLAH | Official Lyrics & Story"
-date: 2026-12-25
+date: 2026-05-11
 categories: ["Music", "Sylheti Rap", "Motivational"]
 thumbnail: "assets/images/rockstar-cover.png"
 ---
 
-# ROCKSTAR: আঘাত থেকে আত্মপ্রকাশের এক নতুন অধ্যায়
+# ROCKSTAR: আঘাত থেকে আত্মপ্রকাশের এক নতুন অধ্যায়
 **Artist:** ASMO ABDULLAH  
-**Release Date:** December 25, 2025
+**Release Date:** December 10, 2025
 
-"ROCKSTAR" হলো ঘুরে দাঁড়ানোর এক জোরালো ইশতেহার। এই ট্র্যাকে এএসএমও আবদুল্লাহ (ASMO ABDULLAH) জীবনের আঘাতগুলোকে সুরের ছন্দে রূপান্তর করেছেন। এটি কেবল একটি গান নয়, বরং নিজের অতীতকে পেছনে ফেলে, মানুষের বিচারকে উপেক্ষা করে একজন ‘রকস্টার’ হিসেবে নিজেকে গড়ে তোলার গল্প। যারা জীবনের কঠিন সময়েও নিজেদের স্বপ্নকে হারতে দেয়নি, এই গানটি তাদের জন্য এক সঞ্জীবনী শক্তি।
+"ROCKSTAR" হলো ঘুরে দাঁড়ানোর এক জোরালো ইশতেহার। এই ট্র্যাকে এএসএমও আবদুল্লাহ (ASMO ABDULLAH) জীবনের আঘাতগুলোকে সুরের ছন্দে রূপান্তর করেছেন। এটি কেবল একটি গান নয়, বরং নিজের অতীতকে পেছনে ফেলে, মানুষের বিচারকে উপেক্ষা করে একজন ‘রকস্টার’ হিসেবে নিজেকে গড়ে তোলার গল্প। যারা জীবনের কঠিন সময়েও নিজেদের স্বপ্নকে হারতে দেয়নি, এই গানটি তাদের জন্য এক সঞ্জীবনী শক্তি।
 
 ---
 
@@ -53,7 +53,7 @@ ami nijor moto solmu jelan hoibo amar morji..
 ---
 
 ### Listen Now
-আপনার ভেতরের রকস্টারকে জাগিয়ে তুলতে এখনই স্ট্রিমিং করুন:
+আপনার ভেতরের রকস্টারকে জাগিয়ে তুলতে এখনই স্ট্রিমিং করুন:
 * [Spotify](https://open.spotify.com/artist/0Zw4jjy9vBDgwKBVbXfhYW)
 * [YouTube](https://music.youtube.com/channel/UCDX_15wIaAZoKbe6KBVkTKA)
 * [Apple Music](https://music.apple.com/om/artist/asmo-abdullah/1860330114)
